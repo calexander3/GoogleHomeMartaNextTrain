@@ -50,7 +50,7 @@ export class NextArrivalService {
                     ` minute${parseInt(filteredArrivals[0].WAITING_TIME) > 1 ? 's' : ''}`;
 
                     if (filteredArrivals.length > 1) {
-                        response += ` followed by another in ${filteredArrivals[1].WAITING_TIME} minute${parseInt(filteredArrivals[0].WAITING_TIME) > 1 ? 's' : ''}`
+                        response += ` followed by another in ${filteredArrivals[1].WAITING_TIME} minute${parseInt(filteredArrivals[1].WAITING_TIME) > 1 ? 's' : ''}`
                     }
                 }
 
