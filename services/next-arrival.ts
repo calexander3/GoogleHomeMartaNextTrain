@@ -36,7 +36,7 @@ export class NextArrivalService {
                 }
                 else {
                     var destFilter = ((a: MartaTrain) => a.DIRECTION === direction);
-                    var trainCriteria = `${this.expandDirection(direction)} bound`
+                    var trainCriteria = `${this.expandDirection(direction)}bound`
                 }
 
                 var filteredArrivals = arrivals.filter(a => !isNaN(parseInt(a.WAITING_TIME)))
