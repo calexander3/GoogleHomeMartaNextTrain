@@ -1,4 +1,4 @@
-import * as https from 'https';
+import * as http from 'http';
 import * as Url from 'url';
 import { RequestOptions } from "http";
 
@@ -7,7 +7,7 @@ export class ApiRequestService{
         return new Promise((resolve:any, reject:any) => {
             let opts: RequestOptions = {
                 host: url.hostname,
-                port: parseInt(url.port || '443'),
+                port: parseInt(url.port || '80'),
                 path: url.path,
                 method: 'GET',
                 headers: {
@@ -17,7 +17,7 @@ export class ApiRequestService{
             if (authorization) {
                 opts.headers['Authorization'] = `bearer ${authorization}`
             }
-            const request = https.get(opts, (response: any) => {
+            const request = http.get(opts, (response: any) => {
             const body: string[] = [];
             response.on('data', (chunk: string) => body.push(chunk));
             response.on('end', () =>{ 
@@ -41,7 +41,7 @@ export class ApiRequestService{
             let postDataString = postData ? JSON.stringify(postData) : null;
             let opts: RequestOptions = {
                 host: url.hostname,
-                port: parseInt(url.port || '443'),
+                port: parseInt(url.port || '80'),
                 path: url.path,
                 method: 'POST',
                 headers: {
@@ -54,7 +54,7 @@ export class ApiRequestService{
             if (postDataString) {
                 opts.headers['Content-Length'] = Buffer.byteLength(postDataString)
             }
-            const request = https.request(opts, (response: any) => {
+            const request = http.request(opts, (response: any) => {
                 const body: string[] = [];
                 response.on('data', (chunk: string) => body.push(chunk));
                 response.on('end', () =>{ 

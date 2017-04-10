@@ -1,11 +1,13 @@
 import * as express from 'express';
 import * as basicAuth from 'basic-auth';
 import * as Url from 'url';
-import { GoogleHomeRequest, Fulfillment } from "../models/google-home";
-import { ApiRequestService } from "../services/api-request";
 import * as https from 'https';
+import { Parameters } from "../models/google-home";
+import { NextArrivalService } from "../services/next-arrival";
 
 export let router = express.Router();
+
+let nextArrivalService = new NextArrivalService();
 
 router.get('/', (req: express.Request, res: express.Response, next: express.NextFunction) => {
   res.sendStatus(405);
@@ -30,5 +32,12 @@ router.post('/', (req: express.Request, res: express.Response, next: express.Nex
     return;
   }
 
+  let trainRequestParameters: Parameters = req.body.result.parameters;
+  nextArrivalService.GetNextArrival(trainRequestParameters.station, trainRequestParameters.destination, trainRequestParameters.direction)
+  .then(response => res.send(response))
+  .catch(err => {
+    console.error(err);
+    res.sendStatus(500);
+  })
  
 });

@@ -24,7 +24,9 @@ export interface Result {
   metadata: Metadata;
 }
 export interface Parameters {
-  date: string;
+  destination: string;
+  direction: string;
+  station: string;
 }
 export interface Fulfillment {
   messages?: (MessagesEntity)[] | null;
