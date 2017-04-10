@@ -20,6 +20,15 @@ export class NextArrivalService {
         }
     }
 
+    private getHeading(destination: string, direction: string): string {
+        if (destination) {
+            return `toward ${destination} station`;
+        }
+        else {
+            return this.expandDirection(direction);
+        }
+    }
+
     public GetNextArrival(station: string, destination: string, direction: string): Promise<Fulfillment> {
          return new Promise((resolve:any, reject:any) => {
             this.apiRequestService.getContent<MartaTrain[]>(Url.parse(`${this.martaApiPath}${station}`))
@@ -30,32 +39,51 @@ export class NextArrivalService {
                                                 .map(i => i[0].toUpperCase() + i.substr(1).toLowerCase())
                                                 .join(' ');
 
+                let destFilter: (a: MartaTrain) => boolean;   
+                let trainCriteria: string;                         
                 if (destination) {
-                    var destFilter = ((a: MartaTrain) => a.HEAD_SIGN === destination);
-                    var trainCriteria = `${destination} bound`
+                    destFilter = ((a: MartaTrain) => a.HEAD_SIGN === destination);
+                    trainCriteria = `${destination} bound`
                 }
-                else {
-                    var destFilter = ((a: MartaTrain) => a.DIRECTION === direction);
-                    var trainCriteria = `${this.expandDirection(direction)}bound`
+                else if(direction) {
+                    destFilter = ((a: MartaTrain) => a.DIRECTION === direction);
+                    trainCriteria = `${this.expandDirection(direction)}bound`
                 }
 
-                var filteredArrivals = arrivals.filter(a => !isNaN(parseInt(a.WAITING_TIME)))
-                .filter(destFilter);
+                let filteredArrivals = arrivals.filter(a => !isNaN(parseInt(a.WAITING_TIME)));
+
+                if (destFilter) {
+                    filteredArrivals = filteredArrivals.filter(destFilter);
                 
-                if (!filteredArrivals.length) {
-                    response = `I'm sorry, I wasn't able to find any ${trainCriteria} trains arriving at ${stationDisplayName} station`;
-                }
-                else {
-                    response = `The next ${trainCriteria} train will arrive at ${stationDisplayName} station in ${filteredArrivals[0].WAITING_TIME}` +
-                    ` minute${parseInt(filteredArrivals[0].WAITING_TIME) > 1 ? 's' : ''}`;
+                    if (!filteredArrivals.length) {
+                        response = `I'm sorry, I wasn't able to find any ${trainCriteria} trains arriving at ${stationDisplayName} station`;
+                    }
+                    else {
+                        response = `The next ${trainCriteria} train will arrive at ${stationDisplayName} station in ${filteredArrivals[0].WAITING_TIME}` +
+                        ` minute${parseInt(filteredArrivals[0].WAITING_TIME) > 1 ? 's' : ''}`;
 
-                    if (filteredArrivals.length > 1) {
-                        response += ` followed by another in ${filteredArrivals[1].WAITING_TIME} minute${parseInt(filteredArrivals[1].WAITING_TIME) > 1 ? 's' : ''}`
+                        if (filteredArrivals.length > 1) {
+                            response += ` followed by another in ${filteredArrivals[1].WAITING_TIME} minute${parseInt(filteredArrivals[1].WAITING_TIME) > 1 ? 's' : ''}`
+                        }
                     }
                 }
+                else {
+                    if (!filteredArrivals.length) {
+                        response = `I'm sorry, I wasn't able to find any trains arriving at ${stationDisplayName} station`;
+                    }
+                    else {
+                        response = `The next train is heading ${this.getHeading(filteredArrivals[0].HEAD_SIGN, filteredArrivals[0].DIRECTION)} and will arrive at ${stationDisplayName} station in ${filteredArrivals[0].WAITING_TIME}` +
+                            ` minute${parseInt(filteredArrivals[0].WAITING_TIME) > 1 ? 's' : ''}`;
+
+                        if (filteredArrivals.length > 1) {
+                            response += ` followed by another train heading ${this.getHeading(filteredArrivals[1].HEAD_SIGN, filteredArrivals[1].DIRECTION)} in ${filteredArrivals[1].WAITING_TIME} minute${parseInt(filteredArrivals[1].WAITING_TIME) > 1 ? 's' : ''}`
+                        }
+                    }
+                }
+               
 
                 resolve({
-                        source: 'MartaBot',
+                        source: 'MartaPal',
                         speech: response + '.',
                         displayText: response + '.'
                     });
