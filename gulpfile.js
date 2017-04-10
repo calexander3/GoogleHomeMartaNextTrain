@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const ts = require('gulp-typescript');
+const del = require('del');
 const gulpCopy = require('gulp-copy');
 const nodemon = require('gulp-nodemon');
 
@@ -10,7 +11,6 @@ gulp.task('compile', () => {
 });
 
 gulp.task('clean', function(cb) {
-  let del = require('del');
   return del('dist', cb);
 })
 

@@ -15,6 +15,7 @@
     "@types/pg": "^6.1.37",
     "basic-auth": "^1.1.0",
     "body-parser": "~1.13.2",
+    "del": "^2.2.2",
     "express": "~4.13.1",
     "forever": "^0.15.3",
     "gulp": "^3.9.1",
@@ -25,9 +26,6 @@
     "pg": "^6.1.4",
     "tslint-config-standard": "^2.0.0",
     "typescript": "^2.2.1"
-  },
-  "devDependencies": {
-    "del": "^2.2.2"
   },
   "name": "GoogleHomeMartaNextTrain",
   "engines": {
