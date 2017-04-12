@@ -27,6 +27,7 @@ export interface Parameters {
   destination: string;
   direction: string;
   station: string;
+  line: string;
 }
 export interface Fulfillment {
   messages?: (MessagesEntity)[] | null;
