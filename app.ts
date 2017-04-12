@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', routes);
 
-app.use('/static',express.static(path.join(__dirname, '/static')));
+app.use('/static',express.static(path.join(process.cwd(), '/static')));
 
 // catch 404 and forward to error handler
 app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
