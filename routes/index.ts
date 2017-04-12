@@ -33,7 +33,10 @@ router.post('/', (req: express.Request, res: express.Response, next: express.Nex
   }
 
   let trainRequestParameters: Parameters = req.body.result.parameters;
-  nextArrivalService.GetNextArrival(trainRequestParameters.station, trainRequestParameters.destination, trainRequestParameters.direction)
+  nextArrivalService.GetNextArrival(trainRequestParameters.station,
+                                    trainRequestParameters.destination,
+                                    trainRequestParameters.direction,
+                                    trainRequestParameters.line)
   .then(response => res.send(response))
   .catch(err => {
     console.error(err);

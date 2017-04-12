@@ -29,7 +29,7 @@ export class NextArrivalService {
         }
     }
 
-    public GetNextArrival(station: string, destination: string, direction: string): Promise<Fulfillment> {
+    public GetNextArrival(station: string, destination: string, direction: string, line: string): Promise<Fulfillment> {
          return new Promise((resolve:any, reject:any) => {
             this.apiRequestService.getContent<MartaTrain[]>(Url.parse(`${this.martaApiPath}${station}`))
             .then(arrivals => {
@@ -48,6 +48,10 @@ export class NextArrivalService {
                 else if(direction) {
                     destFilter = ((a: MartaTrain) => a.DIRECTION === direction);
                     trainCriteria = `${this.expandDirection(direction)}bound`
+                }
+                else if (line) {
+                    destFilter = ((a: MartaTrain) => a.ROUTE.toLowerCase() === line.toLowerCase());
+                    trainCriteria = `${line} line`
                 }
 
                 let filteredArrivals = arrivals.filter(a => !isNaN(parseInt(a.WAITING_TIME)));
