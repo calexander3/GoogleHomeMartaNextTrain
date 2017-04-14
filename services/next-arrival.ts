@@ -87,7 +87,7 @@ export class NextArrivalService {
                
 
                 resolve({
-                        source: 'MartaPal',
+                        source: 'AtlantaRail',
                         speech: response + '.',
                         displayText: response + '.'
                     });
