@@ -4,6 +4,7 @@ import * as logger from 'morgan';
 import * as bodyParser from 'body-parser';
 
 import { router as routes } from './routes/index';
+import { router as health } from './routes/health';
 
 export let app = express();
 
@@ -12,6 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', routes);
+app.use('/health', health);
 
 app.use('/static',express.static(path.join(process.cwd(), '/static')));
 
