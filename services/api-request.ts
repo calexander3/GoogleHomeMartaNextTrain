@@ -1,8 +1,14 @@
 import * as http from 'http';
 import * as Url from 'url';
 import { RequestOptions } from "http";
+import { parseString, OptionsV2 } from "xml2js";
 
 export class ApiRequestService{
+    private xmlOptions: OptionsV2 = {
+        explicitArray: false,
+        async: true
+    };
+
     public getContent<T>(url: Url.Url, authorization?: string): Promise<T> {
         return new Promise((resolve:any, reject:any) => {
             let opts: RequestOptions = {
@@ -26,7 +32,11 @@ export class ApiRequestService{
                         console.error(`${response.statusCode} - ${url.href} - ${responseString}`)
                         reject();
                     }
-                    resolve(JSON.parse(responseString));
+                    if (responseString.startsWith('<')) {
+                        parseString(responseString, this.xmlOptions, (err: any, result: any) => resolve(result));
+                    } else {
+                        resolve(JSON.parse(responseString));
+                    }
                 });
             });
             request.on('error', (err: any) => {
@@ -63,7 +73,11 @@ export class ApiRequestService{
                         console.error(response.statusCode + ' - ' + responseString)
                         reject();
                     }
-                    resolve(JSON.parse(responseString));
+                    if (responseString.startsWith('<')) {
+                        parseString(responseString, this.xmlOptions, (err: any, result: any) => resolve(result));
+                    } else {
+                        resolve(JSON.parse(responseString));
+                    }
                 });
             });
             request.on('error', (err: any) => reject(err));
