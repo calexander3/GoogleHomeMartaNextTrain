@@ -25,14 +25,21 @@ export class RiderAlertService {
                 if (currentAlerts.length) {
                     response = `There ${currentAlerts.length > 1 ? 'are' : 'is'} ${currentAlerts.length} active alert${currentAlerts.length > 1 ? 's' : ''}`
                     currentAlerts.forEach(alert =>{
-                        response += '. ' + alert.desc.split('\"').join('').split('\r').join('').split('\n').join('');
+                        if (!response.endsWith('.')) {
+                            response += '.';
+                        }
+                        response += ' ' + alert.desc.split('\"').join('').split('\r').join('').split('\n').join('');
                     });
+                }
+
+                if (!response.endsWith('.')) {
+                    response += '.';
                 }
 
                 resolve({
                     source: 'AtlantaRail',
-                    speech: response + '.',
-                    displayText: response + '.'
+                    speech: response,
+                    displayText: response
                 });
             });
         });
