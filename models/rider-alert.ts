@@ -1,5 +1,5 @@
 export interface RiderAlert {
-    description: string;
-    start: Date;
-    expire: Date;
+    desc: string;
+    start: string;
+    expire: string;
 }
