@@ -11,8 +11,10 @@
     "@types/body-parser": "^1.16.0",
     "@types/debug": "0.0.29",
     "@types/express": "^4.0.35",
+    "@types/moment-timezone": "^0.2.34",
     "@types/morgan": "^1.7.32",
     "@types/pg": "^6.1.37",
+    "@types/xml2js": "0.0.33",
     "basic-auth": "^1.1.0",
     "body-parser": "~1.13.2",
     "del": "^2.2.2",
@@ -22,10 +24,12 @@
     "gulp-copy": "^1.0.0",
     "gulp-nodemon": "^2.2.1",
     "gulp-typescript": "^3.1.4",
+    "moment-timezone": "^0.5.13",
     "morgan": "~1.6.1",
     "pg": "^6.1.4",
     "tslint-config-standard": "^2.0.0",
-    "typescript": "^2.2.1"
+    "typescript": "^2.2.1",
+    "xml2js": "^0.4.17"
   },
   "name": "GoogleHomeMartaNextTrain",
   "engines": {

@@ -1,0 +1,38 @@
+{
+  "description": "Atlanta Rail is used to get real time train arrival information for Atlanta\u0027s MARTA transit system.",
+  "language": "en",
+  "googleAssistant": {
+    "googleAssistantCompatible": true,
+    "invocationName": "atlanta rail",
+    "project": "martabot-164402",
+    "welcomeIntentSignInRequired": false,
+    "startIntents": [
+      {
+        "intentId": "79609818-829a-4cfc-8ff6-31a857c33e01",
+        "signInRequired": false
+      }
+    ],
+    "endIntentIds": [
+      "cd952b40-e5eb-46c4-ba54-e2fe175f3210",
+      "79609818-829a-4cfc-8ff6-31a857c33e01"
+    ],
+    "oAuthLinking": {
+      "required": false,
+      "grantType": "AUTH_CODE_GRANT"
+    },
+    "voiceType": "MALE_1"
+  },
+  "defaultTimezone": "",
+  "webhook": {
+    "url": "https://martabot.herokuapp.com/",
+    "username": "martabot",
+    "headers": {
+      "": ""
+    },
+    "available": true,
+    "useForDomains": false
+  },
+  "isPrivate": false,
+  "customClassifierMode": "use.after",
+  "mlMinConfidence": 0.2
+}

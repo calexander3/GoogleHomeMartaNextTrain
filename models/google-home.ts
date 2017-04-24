@@ -20,7 +20,7 @@ export interface Result {
   speech: string;
   fulfillment: Fulfillment;
   actionIncomplete: boolean;
-  action: string;
+  action: 'Alerts' | 'NextTrain';
   metadata: Metadata;
 }
 export interface Parameters {

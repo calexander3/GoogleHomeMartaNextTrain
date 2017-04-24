@@ -4,8 +4,8 @@ import { ApiRequestService } from "./api-request";
 import { MartaTrain } from "../models/marta-train";
 
 export class NextArrivalService {
-    martaApiPath = 'http://developer.itsmarta.com/NextTrainService/RestServiceNextTrain.svc/GetNextTrain/'
-    apiRequestService = new ApiRequestService();
+    private martaApiPath = 'http://developer.itsmarta.com/NextTrainService/RestServiceNextTrain.svc/GetNextTrain/'
+    private apiRequestService = new ApiRequestService();
 
     private expandDirection(direction: string): string {
         switch(direction) {

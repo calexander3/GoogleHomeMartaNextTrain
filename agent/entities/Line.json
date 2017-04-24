@@ -1,0 +1,33 @@
+{
+  "id": "4e5c2b08-5878-4b9c-9fe8-8d856d6d4794",
+  "name": "Line",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Gold",
+      "synonyms": [
+        "Gold"
+      ]
+    },
+    {
+      "value": "Red",
+      "synonyms": [
+        "Red"
+      ]
+    },
+    {
+      "value": "Blue",
+      "synonyms": [
+        "Blue"
+      ]
+    },
+    {
+      "value": "Green",
+      "synonyms": [
+        "Green"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
