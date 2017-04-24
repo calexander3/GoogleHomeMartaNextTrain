@@ -2,9 +2,8 @@ import * as path from 'path';
 import * as express from 'express';
 import * as logger from 'morgan';
 import * as bodyParser from 'body-parser';
-
-import { router as routes } from './routes/index';
 import { router as health } from './routes/health';
+import { RequestHandler } from "./routes/index";
 
 export let app = express();
 
@@ -12,7 +11,9 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/', routes);
+let requestHandler = new RequestHandler();
+
+app.use('/', requestHandler.router);
 app.use('/health', health);
 
 app.use('/static',express.static(path.join(process.cwd(), '/static')));
