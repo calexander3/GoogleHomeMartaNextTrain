@@ -7,5 +7,6 @@ Sample Invocations
 ```
 Ok Google, ask Atlanta Rail when will the next red line train arrive at Five Points station?
 Ok Google, ask Atlanta Rail when will the next Doraville train arrive at North Avenue station?
-Ok Google, ask Atlanta Rail when is the next northbound train arriving at west end station? 
+Ok Google, ask Atlanta Rail when is the next northbound train arriving at west end station?
+Ok Google, ask Atlanta Rail are there any rider alerts?
 ```
