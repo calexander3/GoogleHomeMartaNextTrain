@@ -43,7 +43,9 @@
       "value": "brookhaven",
       "synonyms": [
         "brookhaven",
-        "Brookhaven Station"
+        "Brookhaven Station",
+        "Oglethorpe",
+        "Oglethorpe Station"
       ]
     },
     {
@@ -88,7 +90,11 @@
       "synonyms": [
         "dome",
         "Goergia Dome",
-        "Georgia Dome Station"
+        "Georgia Dome Station",
+        "CNN Center",
+        "CNN Center Station",
+        "Philips Arena",
+        "Philips Arena Station"
       ]
     },
     {
@@ -201,7 +207,9 @@
       "value": "lakewood",
       "synonyms": [
         "lakewood",
-        "Lakewood Station"
+        "Lakewood Station",
+        "Fort McPherson",
+        "Fort McPherson Station"
       ]
     },
     {

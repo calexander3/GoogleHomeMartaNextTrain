@@ -13,7 +13,10 @@
       "messages": [
         {
           "type": 0,
-          "speech": "Hello, I\u0027m Atlanta Rail. You can ask me things like \"When is the next northbound train arriving at Civic Center station?\" or \"When is the next Indian Creek train arriving at East Lake station?\""
+          "speech": [
+            "Hello, I\u0027m Atlanta Rail. You can ask me things like \"When is the next northbound train arriving at Civic Center station?\"",
+            "Hello, I\u0027m Atlanta Rail. You can ask me things like \"When is the next Indian Creek train arriving at East Lake station?\""
+          ]
         }
       ]
     }

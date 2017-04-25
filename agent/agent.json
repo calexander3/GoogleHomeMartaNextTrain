@@ -10,11 +10,16 @@
       {
         "intentId": "79609818-829a-4cfc-8ff6-31a857c33e01",
         "signInRequired": false
+      },
+      {
+        "intentId": "9b1f3a80-199d-493d-9bd1-b185b287651c",
+        "signInRequired": false
       }
     ],
     "endIntentIds": [
       "cd952b40-e5eb-46c4-ba54-e2fe175f3210",
-      "79609818-829a-4cfc-8ff6-31a857c33e01"
+      "79609818-829a-4cfc-8ff6-31a857c33e01",
+      "9b1f3a80-199d-493d-9bd1-b185b287651c"
     ],
     "oAuthLinking": {
       "required": false,

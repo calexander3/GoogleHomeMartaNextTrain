@@ -1,6 +1,16 @@
 {
   "userSays": [
     {
+      "id": "92a09d4c-989d-41cb-bb3d-ed87be81e4d4",
+      "data": [
+        {
+          "text": "never mind"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
       "id": "a83fa881-c0ce-435f-a90d-47a44e884510",
       "data": [
         {
