@@ -1,6 +1,59 @@
 {
   "userSays": [
     {
+      "id": "a85d0354-01be-460a-b3ac-b65db18d0d56",
+      "data": [
+        {
+          "text": "when the next "
+        },
+        {
+          "text": "Northbound",
+          "alias": "direction",
+          "meta": "@Direction",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Lenox Station",
+          "alias": "station",
+          "meta": "@Station",
+          "userDefined": false
+        },
+        {
+          "text": " train arrive"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "759d2d95-c285-4a48-ba33-897a10c1a47a",
+      "data": [
+        {
+          "text": "when will the next "
+        },
+        {
+          "text": "red",
+          "alias": "line",
+          "meta": "@Line",
+          "userDefined": false
+        },
+        {
+          "text": " train leave "
+        },
+        {
+          "text": "north avenue",
+          "alias": "station",
+          "meta": "@Station",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
       "id": "00493c9a-d1f2-4df5-844d-98b6930aa840",
       "data": [
         {
@@ -34,7 +87,8 @@
         {
           "text": "red",
           "alias": "line",
-          "meta": "@Line"
+          "meta": "@Line",
+          "userDefined": false
         },
         {
           "text": " line train leave "
@@ -42,7 +96,8 @@
         {
           "text": "sandy springs station",
           "alias": "station",
-          "meta": "@Station"
+          "meta": "@Station",
+          "userDefined": false
         }
       ],
       "isTemplate": false,

@@ -16,6 +16,7 @@
         "signInRequired": false
       }
     ],
+    "systemIntents": [],
     "endIntentIds": [
       "cd952b40-e5eb-46c4-ba54-e2fe175f3210",
       "79609818-829a-4cfc-8ff6-31a857c33e01",
@@ -25,7 +26,9 @@
       "required": false,
       "grantType": "AUTH_CODE_GRANT"
     },
-    "voiceType": "MALE_1"
+    "voiceType": "MALE_1",
+    "capabilities": [],
+    "protocolVersion": "V1"
   },
   "defaultTimezone": "",
   "webhook": {
