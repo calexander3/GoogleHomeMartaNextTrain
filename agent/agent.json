@@ -28,7 +28,7 @@
     },
     "voiceType": "MALE_1",
     "capabilities": [],
-    "protocolVersion": "V1"
+    "protocolVersion": "V2"
   },
   "defaultTimezone": "",
   "webhook": {
