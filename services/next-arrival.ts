@@ -54,7 +54,7 @@ export class NextArrivalService {
                     trainCriteria = `${line} line`
                 }
 
-                let filteredArrivals = arrivals.filter(a => !isNaN(parseInt(a.WAITING_TIME)));
+                let filteredArrivals = arrivals.filter(a => !isNaN(parseInt(a.WAITING_TIME)) && parseInt(a.WAITING_TIME) > 0);
 
                 if (destFilter) {
                     filteredArrivals = filteredArrivals.filter(destFilter);
@@ -84,7 +84,6 @@ export class NextArrivalService {
                         }
                     }
                 }
-               
 
                 resolve({
                         source: 'AtlantaRail',

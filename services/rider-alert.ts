@@ -10,10 +10,17 @@ export class RiderAlertService {
 
     public GetActiveAlerts(): Promise<Fulfillment> {
         return new Promise((resolve:any, reject:any) => {
-            this.apiRequestService.getContent<{alerts: {alert: RiderAlert[]} }>(Url.parse(this.alertsPath))
+            this.apiRequestService.getContent<{alerts: {alert: RiderAlert | RiderAlert[]} }>(Url.parse(this.alertsPath))
             .then(alertsCollection => {
                 let now = moment();
-                let currentAlerts = alertsCollection.alerts.alert
+                let allAlerts: RiderAlert[]
+                if (!(alertsCollection.alerts.alert instanceof Array)) {
+                    allAlerts = [alertsCollection.alerts.alert];
+                }
+                else {
+                    allAlerts = alertsCollection.alerts.alert;
+                }
+                let currentAlerts = allAlerts
                 .filter(alert => {
                     let alertStart = moment.tz(alert.start, 'MM/DD/YYYY HH:mm:ss', 'America/New_York');
                     let alertExpire = moment.tz(alert.expire, 'MM/DD/YYYY HH:mm:ss', 'America/New_York');
@@ -28,7 +35,7 @@ export class RiderAlertService {
                         if (!response.endsWith('.')) {
                             response += '.';
                         }
-                        response += ' ' + alert.desc.split('\"').join('').split('\r').join('').split('\n').join('');
+                        response += ' ' + alert.desc.trim().split('\"').join('').split('\r').join('').split('\n').join('');
                     });
                 }
 
@@ -41,7 +48,8 @@ export class RiderAlertService {
                     speech: response,
                     displayText: response
                 });
-            });
+            })
+        .catch(err => reject(err));
         });
     }
 }
