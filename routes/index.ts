@@ -37,7 +37,6 @@ export class RequestHandler {
       }
       
       let request: GoogleHomeRequest = req.body;
-
       if (typeof(this[`handle${request.result.action}Request`]) === 'function') {
         this[`handle${request.result.action}Request`](request, res);
       }

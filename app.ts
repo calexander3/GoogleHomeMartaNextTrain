@@ -2,6 +2,7 @@ import * as path from 'path';
 import * as express from 'express';
 import * as logger from 'morgan';
 import * as bodyParser from 'body-parser';
+import './utilities/array-utilities';
 import { router as health } from './routes/health';
 import { RequestHandler } from "./routes/index";
 

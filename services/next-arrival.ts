@@ -54,7 +54,9 @@ export class NextArrivalService {
                     trainCriteria = `${line} line`
                 }
 
-                let filteredArrivals = arrivals.filter(a => !isNaN(parseInt(a.WAITING_TIME)) && parseInt(a.WAITING_TIME) > 0);
+                let filteredArrivals = arrivals
+                .filter(a => !isNaN(parseInt(a.WAITING_TIME)) && parseInt(a.WAITING_TIME) > 0)
+                .distinct((a: MartaTrain) => a.DIRECTION + a.WAITING_TIME + a.HEAD_SIGN);
 
                 if (destFilter) {
                     filteredArrivals = filteredArrivals.filter(destFilter);
