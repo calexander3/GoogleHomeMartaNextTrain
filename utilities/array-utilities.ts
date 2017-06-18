@@ -12,7 +12,7 @@ Array.prototype.distinct = function(produceKey: Function) {
         let key = produceKey(element);
         if (!keys.includes(key)) {
             keys.push(key);
-            result.push(result);
+            result.push(element);
         }
     });
     return result;
