@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 
 import { app } from '../app';
-import * as debugModule from 'debug';
-let debug = debugModule('temp:server');
 import * as http from 'http';
 
 let port = normalizePort(process.env.PORT || '3000');
@@ -58,5 +56,4 @@ function onListening() {
   let bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
 }
