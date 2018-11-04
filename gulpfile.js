@@ -10,13 +10,13 @@ gulp.task('clean', function(cb) {
   return del('dist', cb);
 })
 
-gulp.task('copy-static', ['clean'], function() {
+gulp.task('copy-static', gulp.series('clean', () => {
   var source = [
     '.env'
     ]
-  return gulp.src(source)
+  return gulp.src(source,{ allowEmpty: true })
     .pipe(gulpCopy('dist/bin'));
-});
+}));
 
 gulp.task('run', () => {
   var stream = nodemon({
@@ -25,9 +25,9 @@ gulp.task('run', () => {
   return stream;
 });
 
-gulp.task('build', ['copy-static'], () => {
+gulp.task('build', gulp.series('copy-static', () => {
   return tsProject.src().pipe(tsProject())
         .js.pipe(gulp.dest('dist'));
-});
+}));
 
-gulp.task('default', ['watch']);
+gulp.task('default', gulp.series('build'));
