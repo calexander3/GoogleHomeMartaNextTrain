@@ -1,64 +1,4 @@
 {
-  "userSays": [
-    {
-      "id": "ff778c33-ba5c-48eb-ab83-c480b3f84a0c",
-      "data": [
-        {
-          "text": "if there are any alerts?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "9f293377-4c99-4cfd-8a13-943acb83ea98",
-      "data": [
-        {
-          "text": "Any alerts on "
-        },
-        {
-          "text": "Marta",
-          "meta": "@sys.ignore",
-          "userDefined": false
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "2ecd8d1a-9c5b-4036-8666-9377da2ba264",
-      "data": [
-        {
-          "text": "Any rider alerts right now?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "8ba5d64f-1ed1-4beb-83ce-e9084f16c8b3",
-      "data": [
-        {
-          "text": "Are there any alerts?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "b155bf4f-2aad-487e-949e-b3c4c13921c3",
-      "data": [
-        {
-          "text": "Are there any rider alerts?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    }
-  ],
   "id": "9b1f3a80-199d-493d-9bd1-b185b287651c",
   "name": "Alerts",
   "auto": true,
@@ -72,14 +12,18 @@
       "messages": [
         {
           "type": 0,
+          "lang": "en",
           "speech": "I\u0027m sorry, I can\u0027t connect to Marta right now."
         }
-      ]
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
     }
   ],
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
+  "lastUpdate": 1493078577,
   "fallbackIntent": false,
   "events": []
 }

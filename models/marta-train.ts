@@ -1,11 +1,11 @@
 export interface MartaTrain {
     DIRECTION: 'N'|'S'|'E'|'W';
     EVENT_TIME: string;
-    HEAD_SIGN: string;
+    DESTINATION: string;
     NEXT_ARR: string;
-    ROUTE: string;
-    STOP_NAME: string;
-    STOP_TYPE: string;
+    LINE: 'GOLD'|'BLUE'|'RED'|'Green';
+    STATION: string;
+    TRAIN_ID: string;
     WAITING_SECONDS: string;
     WAITING_TIME: string;
 }

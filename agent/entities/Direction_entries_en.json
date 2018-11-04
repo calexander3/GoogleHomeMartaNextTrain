@@ -1,0 +1,34 @@
+[
+  {
+    "value": "N",
+    "synonyms": [
+      "N",
+      "North",
+      "Northbound"
+    ]
+  },
+  {
+    "value": "S",
+    "synonyms": [
+      "S",
+      "South",
+      "Southbound"
+    ]
+  },
+  {
+    "value": "E",
+    "synonyms": [
+      "E",
+      "East",
+      "Eastbound"
+    ]
+  },
+  {
+    "value": "W",
+    "synonyms": [
+      "W",
+      "West",
+      "Westbound"
+    ]
+  }
+]

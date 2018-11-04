@@ -1,46 +1,4 @@
 {
-  "userSays": [
-    {
-      "id": "92a09d4c-989d-41cb-bb3d-ed87be81e4d4",
-      "data": [
-        {
-          "text": "never mind"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "a83fa881-c0ce-435f-a90d-47a44e884510",
-      "data": [
-        {
-          "text": "See you later"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "c0debc85-f45b-42de-8ad8-c80cc4cd6973",
-      "data": [
-        {
-          "text": "Thanks"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "9c79d581-9a73-4c54-a068-28da7f3e750b",
-      "data": [
-        {
-          "text": "Thank you"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    }
-  ],
   "id": "cd952b40-e5eb-46c4-ba54-e2fe175f3210",
   "name": "Goodbye",
   "auto": true,
@@ -59,18 +17,22 @@
       "messages": [
         {
           "type": 0,
+          "lang": "en",
           "speech": [
             "Have a good day.",
             "Good bye",
             "Have a nice trip"
           ]
         }
-      ]
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
     }
   ],
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
+  "lastUpdate": 1493078237,
   "fallbackIntent": false,
   "events": []
 }

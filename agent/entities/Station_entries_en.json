@@ -1,0 +1,298 @@
+[
+  {
+    "value": "AIRPORT STATION",
+    "synonyms": [
+      "airport",
+      "Airport Station"
+    ]
+  },
+  {
+    "value": "ARTS CENTER STATION",
+    "synonyms": [
+      "Arts Center",
+      "Arts Center Station"
+    ]
+  },
+  {
+    "value": "ASHBY STATION",
+    "synonyms": [
+      "ashby",
+      "Ashby Station"
+    ]
+  },
+  {
+    "value": "AVONDALE STATION",
+    "synonyms": [
+      "avondale",
+      "Avondale Station"
+    ]
+  },
+  {
+    "value": "BANKHEAD STATION",
+    "synonyms": [
+      "bankhead",
+      "Bankhead Station"
+    ]
+  },
+  {
+    "value": "BROOKHAVEN STATION",
+    "synonyms": [
+      "brookhaven",
+      "Brookhaven Station",
+      "Oglethorpe",
+      "Oglethorpe Station"
+    ]
+  },
+  {
+    "value": "BUCKHEAD STATION",
+    "synonyms": [
+      "buckhead",
+      "Buckhead Station"
+    ]
+  },
+  {
+    "value": "CHAMBLEE STATION",
+    "synonyms": [
+      "chamblee",
+      "Chamblee Station"
+    ]
+  },
+  {
+    "value": "CIVIC CENTER STATION",
+    "synonyms": [
+      "Civic Center",
+      "Civic Center Station"
+    ]
+  },
+  {
+    "value": "COLLEGE PARK STATION",
+    "synonyms": [
+      "College Park",
+      "College Park Station"
+    ]
+  },
+  {
+    "value": "DECATUR STATION",
+    "synonyms": [
+      "decatur",
+      "Decatur Station"
+    ]
+  },
+  {
+    "value": "OMNI DOME STATION",
+    "synonyms": [
+      "dome",
+      "Goergia Dome",
+      "Georgia Dome Station",
+      "CNN Center",
+      "CNN Center Station",
+      "Philips Arena",
+      "Philips Arena Station",
+      "Omni Dome Station"
+    ]
+  },
+  {
+    "value": "DORAVILLE STATION",
+    "synonyms": [
+      "doraville",
+      "Doraville Station"
+    ]
+  },
+  {
+    "value": "DUNWOODY STATION",
+    "synonyms": [
+      "dunwoody",
+      "Dunwoody Station"
+    ]
+  },
+  {
+    "value": "EAST LAKE STATION",
+    "synonyms": [
+      "East Lake",
+      "East Lake Station"
+    ]
+  },
+  {
+    "value": "EAST POINT STATION",
+    "synonyms": [
+      "East Point",
+      "East Point Station"
+    ]
+  },
+  {
+    "value": "EDGEWOOD CANDLER PARK STATION",
+    "synonyms": [
+      "edgewood",
+      "Edgewood Station",
+      "Candler Park",
+      "Candler",
+      "Candler Park Station"
+    ]
+  },
+  {
+    "value": "FIVE POINTS STATION",
+    "synonyms": [
+      "Five Points",
+      "Five Points Station",
+      "Five Point"
+    ]
+  },
+  {
+    "value": "GARNETT STATION",
+    "synonyms": [
+      "garnett",
+      "Garnett Station"
+    ]
+  },
+  {
+    "value": "GEORGIA STATE STATION",
+    "synonyms": [
+      "Georgia State",
+      "Georgia State Station"
+    ]
+  },
+  {
+    "value": "HAMILTON E HOLMES STATION",
+    "synonyms": [
+      "hamilton",
+      "H E Holmes",
+      "hamilton e holmes",
+      "hamilton holmes",
+      "holmes",
+      "hamilton station",
+      "H E Holmes station",
+      "hamilton e holmes station",
+      "hamilton holmes station",
+      "holmes station"
+    ]
+  },
+  {
+    "value": "INDIAN CREEK STATION",
+    "synonyms": [
+      "Indian Creek",
+      "Indian Creek Station"
+    ]
+  },
+  {
+    "value": "INMAN PARK STATION",
+    "synonyms": [
+      "Inman Park",
+      "Inman Park Station",
+      "Reynoldstown",
+      "Reynoldstown Station",
+      "Inman Park Reynoldstown",
+      "Inman Park Reynoldstown Station"
+    ]
+  },
+  {
+    "value": "KENSINGTON STATION",
+    "synonyms": [
+      "kensington",
+      "Kensington Station"
+    ]
+  },
+  {
+    "value": "KING MEMORIAL STATION",
+    "synonyms": [
+      "King Memorial",
+      "King Memorial Sation"
+    ]
+  },
+  {
+    "value": "LAKEWOOD STATION",
+    "synonyms": [
+      "lakewood",
+      "Lakewood Station",
+      "Fort McPherson",
+      "Fort McPherson Station"
+    ]
+  },
+  {
+    "value": "LENOX STATION",
+    "synonyms": [
+      "lenox",
+      "Lenox Station"
+    ]
+  },
+  {
+    "value": "LINDBERGH STATION",
+    "synonyms": [
+      "lindbergh",
+      "Lindbergh Station"
+    ]
+  },
+  {
+    "value": "MEDICAL CENTER STATION",
+    "synonyms": [
+      "medical%20center",
+      "Medical Center",
+      "Medical Center Station"
+    ]
+  },
+  {
+    "value": "MIDTOWN STATION",
+    "synonyms": [
+      "midtown",
+      "Midtown Station"
+    ]
+  },
+  {
+    "value": "NORTH AVE STATION",
+    "synonyms": [
+      "North Avenue",
+      "North Ave",
+      "North Avenue Station",
+      "Northe Ave Station"
+    ]
+  },
+  {
+    "value": "NORTH SPRINGS STATION",
+    "synonyms": [
+      "North Springs",
+      "North Springs Station"
+    ]
+  },
+  {
+    "value": "OAKLAND CITY STATION",
+    "synonyms": [
+      "Oakland City",
+      "Oakland City Station"
+    ]
+  },
+  {
+    "value": "PEACHTREE CENTER STATION",
+    "synonyms": [
+      "Peachtree Center",
+      "Peachtree Center Station",
+      "Peachtree"
+    ]
+  },
+  {
+    "value": "SANDY SPRINGS STATION",
+    "synonyms": [
+      "Sandy Springs",
+      "Sandy Springs Station"
+    ]
+  },
+  {
+    "value": "VINE CITY STATION",
+    "synonyms": [
+      "Vine City",
+      "Vine City Station"
+    ]
+  },
+  {
+    "value": "WEST END STATION",
+    "synonyms": [
+      "West End",
+      "West End Station"
+    ]
+  },
+  {
+    "value": "WEST LAKE STATION",
+    "synonyms": [
+      "West Lake",
+      "West Lake Station"
+    ]
+  }
+]

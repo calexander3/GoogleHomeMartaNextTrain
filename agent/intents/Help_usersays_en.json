@@ -1,0 +1,38 @@
+[
+  {
+    "id": "27d82c92-8cf9-47a2-9769-d904b5dc318e",
+    "data": [
+      {
+        "text": "What can I ask?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "214d11eb-9c64-4035-8a6a-2384de138916",
+    "data": [
+      {
+        "text": "Help me",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "263ece42-6af4-4f46-b7a7-a5e7dd276f11",
+    "data": [
+      {
+        "text": "Help",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

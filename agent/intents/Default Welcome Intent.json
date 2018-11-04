@@ -1,5 +1,4 @@
 {
-  "userSays": [],
   "id": "ab7142bb-ef20-40e1-b686-a40ff58f75f3",
   "name": "Default Welcome Intent",
   "auto": true,
@@ -13,17 +12,21 @@
       "messages": [
         {
           "type": 0,
+          "lang": "en",
           "speech": [
             "Hello, I\u0027m Atlanta Rail. You can ask me things like \"When is the next northbound train arriving at Civic Center station?\"",
             "Hello, I\u0027m Atlanta Rail. You can ask me things like \"When is the next Indian Creek train arriving at East Lake station?\""
           ]
         }
-      ]
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
     }
   ],
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
+  "lastUpdate": 1494461107,
   "fallbackIntent": false,
   "events": [
     {

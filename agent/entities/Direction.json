@@ -2,40 +2,6 @@
   "id": "f10eea03-0160-4a1d-b748-818dd4aabdd1",
   "name": "Direction",
   "isOverridable": true,
-  "entries": [
-    {
-      "value": "N",
-      "synonyms": [
-        "N",
-        "North",
-        "Northbound"
-      ]
-    },
-    {
-      "value": "S",
-      "synonyms": [
-        "S",
-        "South",
-        "Southbound"
-      ]
-    },
-    {
-      "value": "E",
-      "synonyms": [
-        "E",
-        "East",
-        "Eastbound"
-      ]
-    },
-    {
-      "value": "W",
-      "synonyms": [
-        "W",
-        "West",
-        "Westbound"
-      ]
-    }
-  ],
   "isEnum": false,
   "automatedExpansion": false
 }

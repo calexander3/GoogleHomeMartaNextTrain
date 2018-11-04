@@ -6,30 +6,24 @@ const nodemon = require('gulp-nodemon');
 
 const tsProject = ts.createProject('tsconfig.json');
 
-gulp.task('compile', () => {
-  return tsResult = tsProject.src().pipe(tsProject()).js.pipe(gulp.dest('.'));
-});
-
 gulp.task('clean', function(cb) {
   return del('dist', cb);
 })
 
 gulp.task('copy-static', ['clean'], function() {
   var source = [
-    'views/**/*',
-    'public/**/*',
-    'models/**/*'
+    '.env'
     ]
   return gulp.src(source)
-    .pipe(gulpCopy('dist'));
+    .pipe(gulpCopy('dist/bin'));
 });
 
-gulp.task('watch', ['compile'], () => {
+gulp.task('watch', ['build'], () => {
   var stream = nodemon({
                  script: 'bin/www'
                , ext: 'ts'
                , watch: '.'
-               , tasks: ['compile']
+               , tasks: ['build']
             });
   return stream;
 });

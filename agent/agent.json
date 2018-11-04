@@ -1,6 +1,7 @@
 {
   "description": "Atlanta Rail is used to get real time train arrival information for Atlanta\u0027s MARTA transit system.",
   "language": "en",
+  "disableStackdriverLogs": true,
   "googleAssistant": {
     "googleAssistantCompatible": true,
     "invocationName": "atlanta rail",
@@ -28,7 +29,8 @@
     },
     "voiceType": "MALE_1",
     "capabilities": [],
-    "protocolVersion": "V2"
+    "protocolVersion": "V2",
+    "isDeviceAgent": false
   },
   "defaultTimezone": "",
   "webhook": {
@@ -38,9 +40,17 @@
       "": ""
     },
     "available": true,
-    "useForDomains": false
+    "useForDomains": false,
+    "cloudFunctionsEnabled": false,
+    "cloudFunctionsInitialized": false
   },
   "isPrivate": false,
   "customClassifierMode": "use.after",
-  "mlMinConfidence": 0.2
+  "mlMinConfidence": 0.2,
+  "supportedLanguages": [],
+  "onePlatformApiVersion": "v1legacy",
+  "analyzeQueryTextSentiment": false,
+  "enabledKnowledgeBaseNames": [],
+  "knowledgeServiceConfidenceAdjustment": -0.4,
+  "dialogBuilderMode": false
 }

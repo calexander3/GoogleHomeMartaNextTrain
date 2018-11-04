@@ -1,0 +1,49 @@
+[
+  {
+    "value": "Doraville",
+    "synonyms": [
+      "Doraville"
+    ]
+  },
+  {
+    "value": "North Springs",
+    "synonyms": [
+      "North Springs",
+      "North Spring Station"
+    ]
+  },
+  {
+    "value": "Indian Creek",
+    "synonyms": [
+      "Indian Creek",
+      "Indian Creek Station"
+    ]
+  },
+  {
+    "value": "Hamilton E Holmes",
+    "synonyms": [
+      "Hamilton E Holmes",
+      "H E Holmes",
+      "Hamilton Holmes",
+      "Holmes",
+      "Hamilton E Holmes Station",
+      "H E Holmes Station",
+      "Hamilton Holmes Station",
+      "Holmes Station"
+    ]
+  },
+  {
+    "value": "Airport",
+    "synonyms": [
+      "Airport",
+      "Airport Station"
+    ]
+  },
+  {
+    "value": "Bankhead",
+    "synonyms": [
+      "Bankhead",
+      "Bankhead Station"
+    ]
+  }
+]
