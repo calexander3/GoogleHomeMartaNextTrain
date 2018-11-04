@@ -18,16 +18,6 @@ gulp.task('copy-static', ['clean'], function() {
     .pipe(gulpCopy('dist/bin'));
 });
 
-gulp.task('watch', ['build'], () => {
-  var stream = nodemon({
-                 script: 'bin/www'
-               , ext: 'ts'
-               , watch: '.'
-               , tasks: ['build']
-            });
-  return stream;
-});
-
 gulp.task('run', () => {
   var stream = nodemon({
                  script: './dist/bin/www.js'

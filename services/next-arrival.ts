@@ -38,6 +38,9 @@ export class NextArrivalService {
                                                 .map(i => i[0].toUpperCase() + i.substr(1).toLowerCase())
                                                 .join(' ');
 
+                arrivals.forEach(a => {
+                    a.WAITING_TIME = a.WAITING_TIME.replace(' min', '');
+                });
                 let filteredArrivals = arrivals
                 .filter(a =>a.STATION === station && !isNaN(parseInt(a.WAITING_TIME)) && parseInt(a.WAITING_TIME) > 0)
                 .distinct((a: MartaTrain) => a.DIRECTION + a.WAITING_TIME + a.DESTINATION);
