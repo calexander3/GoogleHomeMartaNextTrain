@@ -38,12 +38,13 @@ export class NextArrivalService {
                                                 .map(i => i[0].toUpperCase() + i.substr(1).toLowerCase())
                                                 .join(' ');
 
-                arrivals.forEach(a => {
-                    a.WAITING_TIME = a.WAITING_TIME.replace(' min', '');
-                });
                 let filteredArrivals = arrivals
-                .filter(a =>a.STATION === station && !isNaN(parseInt(a.WAITING_TIME)) && parseInt(a.WAITING_TIME) > 0)
-                .distinct((a: MartaTrain) => a.DIRECTION + a.WAITING_TIME + a.DESTINATION);
+                .filter(a =>a.STATION === station && !isNaN(parseInt(a.WAITING_SECONDS)) && parseInt(a.WAITING_SECONDS) > 0)
+                .distinct((a: MartaTrain) => a.DIRECTION + a.WAITING_SECONDS + a.DESTINATION);
+
+                filteredArrivals.forEach(a => {
+                    a.WAITING_MINUTES = Math.ceil(parseInt(a.WAITING_SECONDS) / 60);
+                });
 
                 let destFilter: (a: MartaTrain) => boolean;   
                 let trainCriteria: string;                         
@@ -67,11 +68,11 @@ export class NextArrivalService {
                         response = `I'm sorry, I wasn't able to find any ${trainCriteria} trains arriving at ${stationDisplayName}`;
                     }
                     else {
-                        response = `The next ${trainCriteria} train will arrive at ${stationDisplayName} in ${filteredArrivals[0].WAITING_TIME}` +
-                        ` minute${parseInt(filteredArrivals[0].WAITING_TIME) > 1 ? 's' : ''}`;
+                        response = `The next ${trainCriteria} train will arrive at ${stationDisplayName} in ${filteredArrivals[0].WAITING_MINUTES}` +
+                        ` minute${filteredArrivals[0].WAITING_MINUTES > 1 ? 's' : ''}`;
 
                         if (filteredArrivals.length > 1) {
-                            response += ` followed by another in ${filteredArrivals[1].WAITING_TIME} minute${parseInt(filteredArrivals[1].WAITING_TIME) > 1 ? 's' : ''}`
+                            response += ` followed by another in ${filteredArrivals[1].WAITING_MINUTES} minute${filteredArrivals[1].WAITING_MINUTES > 1 ? 's' : ''}`
                         }
                     }
                 }
@@ -80,11 +81,11 @@ export class NextArrivalService {
                         response = `I'm sorry, I wasn't able to find any trains arriving at ${stationDisplayName}`;
                     }
                     else {
-                        response = `The next train is heading ${this.getHeading(filteredArrivals[0].DESTINATION, filteredArrivals[0].DIRECTION)} and will arrive at ${stationDisplayName} in ${filteredArrivals[0].WAITING_TIME}` +
-                            ` minute${parseInt(filteredArrivals[0].WAITING_TIME) > 1 ? 's' : ''}`;
+                        response = `The next train is heading ${this.getHeading(filteredArrivals[0].DESTINATION, filteredArrivals[0].DIRECTION)} and will arrive at ${stationDisplayName} in ${filteredArrivals[0].WAITING_MINUTES}` +
+                            ` minute${filteredArrivals[0].WAITING_MINUTES > 1 ? 's' : ''}`;
 
                         if (filteredArrivals.length > 1) {
-                            response += ` followed by another train heading ${this.getHeading(filteredArrivals[1].DESTINATION, filteredArrivals[1].DIRECTION)} in ${filteredArrivals[1].WAITING_TIME} minute${parseInt(filteredArrivals[1].WAITING_TIME) > 1 ? 's' : ''}`
+                            response += ` followed by another train heading ${this.getHeading(filteredArrivals[1].DESTINATION, filteredArrivals[1].DIRECTION)} in ${filteredArrivals[1].WAITING_MINUTES} minute${filteredArrivals[1].WAITING_MINUTES > 1 ? 's' : ''}`
                         }
                     }
                 }
