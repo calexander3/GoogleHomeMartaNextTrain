@@ -14,7 +14,7 @@ gulp.task('copy-static', gulp.series('clean', () => {
   var source = [
     '.env'
     ]
-  return gulp.src(source)
+  return gulp.src(source,{ allowEmpty: true })
     .pipe(gulpCopy('dist/bin'));
 }));
 
