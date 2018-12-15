@@ -3,7 +3,6 @@
   "private": true,
   "scripts": {
     "start": "./node_modules/.bin/forever ./dist/bin/www.js",
-    "watch": "./node_modules/.bin/gulp watch",
     "postinstall": "./node_modules/.bin/gulp build",
     "test": "gulp build && \"./node_modules/.bin/jasmine\" --config=jasmine.json"
   },

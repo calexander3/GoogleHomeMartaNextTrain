@@ -18,13 +18,6 @@ gulp.task('copy-static', gulp.series('clean', () => {
     .pipe(gulpCopy('dist/bin'));
 }));
 
-gulp.task('run', () => {
-  var stream = nodemon({
-                 script: './dist/bin/www.js'
-            });
-  return stream;
-});
-
 gulp.task('build', gulp.series('copy-static', () => {
   return tsProject.src().pipe(tsProject())
         .js.pipe(gulp.dest('dist'));
