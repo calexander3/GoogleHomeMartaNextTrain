@@ -6,7 +6,9 @@ import { RiderAlert } from "../models/rider-alert"
 
 export class RiderAlertService {
     private alertsPath = 'http://developer.itsmarta.com/service_alerts.xml';
-    private apiRequestService = new ApiRequestService();
+
+    public constructor(private apiRequestService: ApiRequestService){
+    }
 
     public GetActiveAlerts(): Promise<Fulfillment> {
         return new Promise((resolve:any, reject:any) => {

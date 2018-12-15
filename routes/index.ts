@@ -1,16 +1,16 @@
 import * as express from 'express';
 import * as basicAuth from 'basic-auth';
-import * as Url from 'url';
-import * as https from 'https';
-import { Parameters, GoogleHomeRequest } from "../models/google-home";
+import { GoogleHomeRequest } from "../models/google-home";
+import { ApiRequestService } from "../services/api-request";
 import { NextArrivalService } from "../services/next-arrival";
 import { RiderAlertService } from "../services/rider-alert";
 
 export class RequestHandler {
   public router = express.Router();
 
-  private nextArrivalService = new NextArrivalService();
-  private alertService = new RiderAlertService();
+  private apiRequestService = new ApiRequestService();
+  private nextArrivalService = new NextArrivalService(this.apiRequestService);
+  private alertService = new RiderAlertService(this.apiRequestService);
 
   constructor() {
     this.router.get('/', (req: express.Request, res: express.Response, next: express.NextFunction) => {

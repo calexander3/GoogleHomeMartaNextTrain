@@ -5,7 +5,9 @@ import { MartaTrain } from "../models/marta-train";
 
 export class NextArrivalService {
     private martaApiPath = 'http://developer.itsmarta.com/RealtimeTrain/RestServiceNextTrain/GetRealtimeArrivals?apikey='
-    private apiRequestService = new ApiRequestService();
+    
+    public constructor(private apiRequestService: ApiRequestService){
+    }
     
     private expandDirection(direction: string): string {
         switch(direction) {
