@@ -1,5 +1,5 @@
-import { RiderAlertService } from "./rider-alert";
 import { ApiRequestService } from "./api-request";
+import { RiderAlertService } from "./rider-alert";
 
 describe("rider alert service", () => {
     it("should return empty message when no alerts are present", (done: any) => {
