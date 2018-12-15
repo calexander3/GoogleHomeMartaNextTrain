@@ -4,7 +4,8 @@
   "scripts": {
     "start": "./node_modules/.bin/forever ./dist/bin/www.js",
     "watch": "./node_modules/.bin/gulp watch",
-    "postinstall": "./node_modules/.bin/gulp build"
+    "postinstall": "./node_modules/.bin/gulp build",
+    "test": "gulp build && \"./node_modules/.bin/jasmine\" --config=jasmine.json"
   },
   "dependencies": {
     "@types/basic-auth": "1.1.2",
@@ -31,6 +32,13 @@
     "natives": "^1.1.6",
     "typescript": "^3.2.2",
     "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.3.2",
+    "jasmine": "^3.3.1",
+    "jasmine-core": "^3.3.0",
+    "jasmine-ts": "^0.3.0",
+    "ts-node": "^7.0.1"
   },
   "name": "GoogleHomeMartaNextTrain",
   "engines": {
