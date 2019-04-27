@@ -19,6 +19,7 @@
     "del": "^4.1.0",
     "dotenv": "^7.0.0",
     "express": "~4.16.4",
+    "extend": "^3.0.2",
     "forever-timespan-patch": "^0.15.4",
     "graceful-fs": "^4.1.15",
     "gulp": "^4.0.1",
